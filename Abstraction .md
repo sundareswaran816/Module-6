@@ -1,12 +1,12 @@
-# Python OOP: Abstract Class & Method Example
+# 🐍 Python OOP: Abstract Class & Method Example
 
-## AIM
+## 🎯 AIM
 
 To create an **abstract class** named `Shape` with an **abstract method** `calculate_area`, and implement this method in two subclasses: `Rectangle` and `Circle`.
 
 ---
 
-## ALGORITHM
+## 🧠 ALGORITHM
 
 1. **Import ABC module**:
    - Use `from abc import ABC, abstractmethod` to define abstract classes and methods.
@@ -28,31 +28,33 @@ To create an **abstract class** named `Shape` with an **abstract method** `calcu
 
 ---
 
-## Program
-```
-from abc import ABC, abstractmethod
+## 💻 Program
+
+```python
+from abc import ABC
 class Shape(ABC):
-    @abstractmethod
     def calculate_area(self):
         pass
 class Rectangle(Shape):
-    def __init__(self):
-        self.length = 10
-        self.breadth = 5
+    length = 5
+    breadth =3 
     def calculate_area(self):
         return self.length * self.breadth
+
 class Circle(Shape):
-    def __init__(self):
-        self.radius = 7
-    def calculate_area(self):
-        return 3.14 * self.radius * self.radius
-rect = Rectangle()
-cir = Circle()
-print("Area of Rectangle:", rect.calculate_area())
-print("Area of Circle:", cir.calculate_area())
+  radius = 4
+  def calculate_area(self):
+        return self.radius * self.radius*3.14
+
+rec=Rectangle()
+cir=Circle()#object created for the class 'Rectangle'
+#object created for the class 'Circle'
+print("Area of a rectangle:", rec.calculate_area()) #call to 'calculate_area' method defined inside the class 'Rectangle'
+print("Area of a circle:", cir.calculate_area()) #call to 'calculate_area' method defined inside the class 'Circle'.
 ```
+
 ## Output
-![alt text](1.png)
+![image](https://github.com/user-attachments/assets/554ecd61-8eb9-4a3c-b5d3-699389af9b97)
 
 ## Result
-Thus, the Python program successfully demonstrates the use of an abstract class and abstract method, with proper implementation in the Rectangle and Circle subclasses.
+Thus, the python program is executed successfully.
