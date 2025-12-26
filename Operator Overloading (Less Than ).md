@@ -1,12 +1,12 @@
-# Python OOP: Operator Overloading (Less Than `<`)
+# 🐍 Python OOP: Operator Overloading (Less Than `<`)
 
-## AIM
+## 🎯 AIM
 
 To write a Python program that demonstrates **operator overloading** by overloading the **less than (`<`)** operator using a custom class.
 
 ---
 
-## ALGORITHM
+## 🧠 ALGORITHM
 
 1. **Create Class `A`**:
    - Define the `__init__()` method to initialize the object with a value `a`.
@@ -24,22 +24,22 @@ To write a Python program that demonstrates **operator overloading** by overload
 
 ---
 
-## Program
-```
+## 💻 Program
+```python
 class A:
-    def __init__(self, a):
-        self.a = a
-    def __lt__(self, o):
-        if self.a < o.a:
-            return "ob1 is less than ob2"
-        else:
-            return "ob2 is less than ob1"
-ob1 = A(10)
-ob2 = A(20)
-print(ob1 < ob2)
+    def __init__(self,a):
+        self.a=a
+    def __gt__(self,other):
+        return self.a<other.a
+ob1=A(200)
+ob2=A(30)
+if(ob1<ob2):
+    print("ob2 is less than ob1")
+else:
+    print("ob1 is less than ob1")
 ```
 ## Output
-![alt text](4.png)
+![image](https://github.com/user-attachments/assets/bcd64234-688e-48cc-b1b8-b515de6a1f5b)
 
 ## Result
-Thus, the Python program successfully demonstrates operator overloading by overloading the less than (<) operator using the __lt__() method.
+Thus,the program is executed successfully.
